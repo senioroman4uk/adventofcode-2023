@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using Helpers;
 using KTrie;
 
 var stringDigits = new StringTrie<int>
@@ -28,11 +29,7 @@ var stringDigitsReverse = new StringTrie<int>
     { new string("nine".Reverse().ToArray()), 9 },
 };
 var calibrationValues = new List<int>();
-string fileName = "input.txt";
-if (args.Length == 1)
-{
-    fileName = args[0];
-}
+var fileName = Helper.GetFileName(args);
 foreach (string line in File.ReadLines(fileName))
 {
     var firstDigit = ExtractCalibrationValueDigit(line);
