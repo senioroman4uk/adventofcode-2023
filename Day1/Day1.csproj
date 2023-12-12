@@ -8,4 +8,14 @@
         <RootNamespace>AdventOfCode2023</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Update="*.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="KTrie" Version="1.3.0" />
+    </ItemGroup>
+
 </Project>
